@@ -7,7 +7,7 @@
 |email|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :groups,through:group_users
+- has_many :groups,through:groups_users
 - has_many :groups_users
 - has_many :comments
 
@@ -30,8 +30,8 @@
 |group_name|string|null: false, unique: true|
 ### Association
 - has_many :comments
-- has_many :group_users
-- has_many :users,through:group_users
+- has_many :groups_users
+- has_many :users,through:groups_users
 
 
 ## groups_usersテーブル
